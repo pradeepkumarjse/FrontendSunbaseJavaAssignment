@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Frontend for Sunbase Java Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is the frontend repository for the Sunbase Java Assignment. The user interface (UI) is designed for basic functionality, consisting of three screens: Login, Customer List, and Add a New Customer.
 
-## Available Scripts
+## Screens
 
-In the project directory, you can run:
+### Login Screen
+The login screen contains input fields for the username and password, along with a submit button. It is the entry point for user authentication.
+![Project Screenshot 1](./project-screenshot-1.png)
 
-### `npm start`
+### Customer List Screen
+The customer list screen displays a table of customer data with the following columns: First Name, Last Name, Address, City, State, Email, Phone, and Action. It allows users to view, edit, and delete customer entries. The table also provides a search functionality to filter data based on First Name, City, Email, or Phone.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Project Screenshot 2](./project-screenshot-2.1.png)
+![Project Screenshot 3](./project-screenshot-2.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Add a New Customer Screen
+The "Add a new customer" screen provides input fields for creating a new customer. Users can input details such as First Name, Last Name, Street, Address, City, State, Email, and Phone. Clicking the "Save" button sends a request to the backend API to add the new customer.
 
-### `npm test`
+![Project Screenshot 4](./project-screenshot-3.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
+Follow the steps below to set up and run the frontend locally:
 
-### `npm run build`
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/your-username/sunbase-frontend.git
+    cd sunbase-frontend
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Run the Application:**
+    ```bash
+    npm start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open your browser and visit `http://localhost:3000` to view the application.
 
-### `npm run eject`
+## Technologies Used
+- React
+- React Bootstrap
+- FontAwesome
+- Other relevant dependencies mentioned in `package.json`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Notes
+- Ensure the backend server is running and accessible for API requests.
+- Customize the environment variables, API URLs, or other configurations as needed in the code.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to enhance the UI, add more features, or make improvements based on your project requirements.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Remember to customize the instructions, URLs, and other details based on your actual project setup and requirements.
