@@ -1,0 +1,57 @@
+
+.custom-table {
+    background-color: black;
+    color: white !important;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    border-color: white !important;
+  }
+  
+  .customer-list-title {
+    text-align: center;
+    color: white !important;
+    background-color: black;
+    padding: 10px;
+  }
+
+
+  .circle-icon {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .minus-icon {
+    color: black;
+  }
+
+  .action-icons {
+    display: flex;
+  }
+
+  .group-actions{
+    height: 60px !important;
+  }
+
+  .add-customer-button{
+    width: 170px !important;
+  }
+
+
+  .search-customer-button{
+    width: 210px !important;
+  }
+
+  .search-customer-icon{
+    margin-left: -71px !important;
+  }
+  
+.margin-button{
+    margin-top: 32px !important;
+}
