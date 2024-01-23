@@ -173,20 +173,19 @@ const TableComponent = ({ data,token,fetchCustomers}) => {
       const applySearchFilter = () => {
         // Filter data based on search criteria and term
         const filteredData = data.filter((customer) => {
-            
-          const searchField = customer[searchCriteria.toLowerCase()];
-      
+          const searchField = customer[searchCriteria];    
           // Check if searchTerm is defined and searchField is present for the current customer
           if (searchTerm !== undefined && searchField !== undefined) {
             // Case-insensitive search
-            return !searchField.toLowerCase().includes(searchTerm.toLowerCase());
+            return searchField.toLowerCase().includes(searchTerm.toLowerCase());
           }
-      
+    
           return true;
         });
-      
+    
         return filteredData;
-      };
+      }
+      
       
       const syncCustomers = () => {
         const suncApiUrl = `http://localhost:8080/api/customers/sync`;
@@ -254,7 +253,7 @@ const TableComponent = ({ data,token,fetchCustomers}) => {
                                         title={searchCriteria}
                                         id="input-group-dropdown-1"
                                     >
-                                        <Dropdown.Item onClick={() => setSearchCriteria('Search by')}>All</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => setSearchCriteria('All')}>All</Dropdown.Item>
                                         <Dropdown.Item onClick={() => setSearchCriteria('firstName')}>First Name</Dropdown.Item>
                                         <Dropdown.Item onClick={() => setSearchCriteria('city')}>City</Dropdown.Item>
                                         <Dropdown.Item onClick={() => setSearchCriteria('email')}>Email</Dropdown.Item>
@@ -263,7 +262,7 @@ const TableComponent = ({ data,token,fetchCustomers}) => {
                                 </Col>
                                 <Col className='group-actions'>
                                     <FormControl
-                                        placeholder={`Search by ${searchCriteria.toLowerCase()}`}
+                                        placeholder={`Search by ${searchCriteria.toLowerCase()=="search by"?"":searchCriteria.toLowerCase()}`}
                                         aria-label="Search"
                                         aria-describedby="basic-addon2"
                                         value={searchTerm}
