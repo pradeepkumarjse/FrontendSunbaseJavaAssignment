@@ -6,7 +6,8 @@ import './TableComponent.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { faMinus, faPen, faPlus, faSearch } from '@fortawesome/free-solid-svg-icons'; 
+import { faMinus, faPen, faPlus, faSearch,faSync } from '@fortawesome/free-solid-svg-icons'; 
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -187,6 +188,43 @@ const TableComponent = ({ data,token,fetchCustomers}) => {
         return filteredData;
       };
       
+      const syncCustomers = () => {
+        const suncApiUrl = `http://localhost:8080/api/customers/sync`;
+    
+        // Make the POST request
+        fetch(suncApiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then(response => {
+            if (response.ok) {        
+             fetchCustomers();
+            toast.success('Customer synchronization completed successfully!', {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+              });            } else {
+            }
+          })
+          .catch(error => {
+
+            toast.error('An Error occured while syncing Customers please try again later!', {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+              }); 
+            
+          });
+      }
       
       
 
@@ -200,9 +238,9 @@ const TableComponent = ({ data,token,fetchCustomers}) => {
                     </th>
                 </tr>
                 <tr>
-                    <td colSpan="8">
+                    <td colSpan="12">
                         <InputGroup className="mb-2">
-                            <Row className='mt-2'>
+                            <Row className='mt-2 justify-content-end'>
                                 <Col className='group-actions group-actions1 margin-button'>
                                     <Button variant="primary" onClick={handleShowModal} className='add-customer-button mr-2'>
                                         <FontAwesomeIcon icon={faPlus} /> Add Customer
@@ -236,6 +274,13 @@ const TableComponent = ({ data,token,fetchCustomers}) => {
                                 <Col className='group-actions margin-button'>
                                     <Button variant="outline-secondary" className='search-customer-icon'>
                                         <FontAwesomeIcon icon={faSearch} />
+                                    </Button>
+                                </Col>
+
+                                <Col className='group-actions ml-auto margin-button'>
+                                    <Button variant="outline-secondary" className='search-customer-icon btn btn-light' onClick={(e) => syncCustomers()}>
+                                        Sync &nbsp;
+                                        <FontAwesomeIcon icon={faSync} />
                                     </Button>
                                 </Col>
                             </Row>
