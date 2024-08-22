@@ -53,7 +53,7 @@ Follow the steps below to set up and run the frontend locally:
 
 Feel free to enhance the UI, add more features, or make improvements based on your project requirements.
 
-Remember to customize the instructions, URLs, and other details based on your actual project setup and requirements.
+Remember to customize the instructions, URLs, and other details based on your actual project setup and requirements. 
 
 
 
