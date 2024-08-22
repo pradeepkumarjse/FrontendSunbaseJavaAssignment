@@ -1,4 +1,4 @@
-# Frontend for Sunbase Java Assignment
+# Frontend for Sunbase Java Assignment 
 
 ## Overview
 This is the frontend repository for the Sunbase Java Assignment. The user interface (UI) is designed for basic functionality, consisting of three screens: Login, Customer List, and Add a New Customer.
