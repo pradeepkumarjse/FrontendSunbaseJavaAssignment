@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Location of your package.json file
+    schedule:
+      interval: "daily" # Options: "daily", "weekly", "monthly"
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "yarn"
+    directory: "/"
+    schedule:
+      interval: "daily"
